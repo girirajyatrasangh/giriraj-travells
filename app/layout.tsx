@@ -17,12 +17,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Giriraj Yatra Sangh | Premium Chauffeur Services — Jamnagar',
+  title: 'Giriraj Yatra Sangh | Premium Cab Services — Jamnagar',
   description:
-    'Giriraj Yatra Sangh — 51 years of trusted, premium chauffeur-driven vehicle rentals in Jamnagar, Gujarat. Luxury cars, SUVs & buses for all occasions.',
-  keywords: 'chauffeur, vehicle rental, Jamnagar, Gujarat, luxury car, tour, travel, Giriraj Yatra Sangh',
+    'Giriraj Yatra Sangh — 51 years of trusted, premium cab and vehicle rentals in Jamnagar, Gujarat. Luxury cars, SUVs & buses for all occasions.',
+  keywords: 'cab, vehicle rental, Jamnagar, Gujarat, luxury car, tour, travel, Giriraj Yatra Sangh',
   openGraph: {
-    title: 'Giriraj Yatra Sangh | Premium Chauffeur Services',
+    title: 'Giriraj Yatra Sangh | Premium Cab Services',
     description: '51 years of trusted travel in Gujarat. Book luxury cars, SUVs & buses.',
     type: 'website',
     locale: 'en_IN',

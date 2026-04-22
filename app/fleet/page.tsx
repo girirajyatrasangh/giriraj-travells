@@ -7,12 +7,12 @@ import VehicleCard from '@/components/VehicleCard'
 import CTAStrip from '@/components/home/CTAStrip'
 import { fleetData } from '@/lib/fleet-data'
 
-type Category = 'all' | 'luxury' | 'sedan-suv' | 'bus'
+type Category = 'all' | 'car' | 'van' | 'bus'
 
 const tabs: { key: Category; label: string; count: number }[] = [
   { key: 'all', label: 'All Vehicles', count: fleetData.length },
-  { key: 'luxury', label: 'Luxury Cars', count: fleetData.filter((v) => v.category === 'luxury').length },
-  { key: 'sedan-suv', label: 'Sedans & SUVs', count: fleetData.filter((v) => v.category === 'sedan-suv').length },
+  { key: 'car', label: 'Cars & SUVs', count: fleetData.filter((v) => v.category === 'car').length },
+  { key: 'van', label: 'Vans & Travellers', count: fleetData.filter((v) => v.category === 'van').length },
   { key: 'bus', label: 'Buses & Coaches', count: fleetData.filter((v) => v.category === 'bus').length },
 ]
 
@@ -28,13 +28,13 @@ export default function FleetPage() {
         {/* Hero banner */}
         <section className="pt-28 pb-14 bg-[#080603] border-b border-[rgba(201,168,76,0.15)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Premium Fleet</p>
+            <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Premium Vehicles</p>
             <h1 className="text-[#F5F0E8] font-serif text-4xl sm:text-5xl font-bold mb-4 text-balance">
-              Our Vehicle Fleet
+              Our Cabs & Buses
             </h1>
             <div className="gold-divider w-24 mx-auto mt-4 mb-6" />
             <p className="text-[#9C9080] max-w-xl mx-auto text-sm leading-relaxed font-body">
-              200+ well-maintained vehicles across every category. All our chauffeurs are trained, verified, and deeply familiar with Gujarat&apos;s roads.
+              200+ well-maintained vehicles across every category. All our drivers are trained, verified, and deeply familiar with Gujarat&apos;s roads.
             </p>
           </div>
         </section>
@@ -66,6 +66,19 @@ export default function FleetPage() {
                   </span>
                 </button>
               ))}
+            </div>
+
+            {/* Important Notes */}
+            <div className="max-w-3xl mx-auto mb-10 p-4 rounded-xl border border-[#C9A84C]/20 bg-[#C9A84C]/5 flex items-start gap-4 shadow-sm">
+              <div className="text-[#C9A84C] mt-0.5 shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              </div>
+              <div>
+                <p className="text-[#E2C97E] text-sm font-semibold mb-1 tracking-wide">Important Pricing Notes</p>
+                <p className="text-[#9C9080] text-xs leading-relaxed font-body">
+                  All rates shown are strictly <strong>per kilometer</strong>. There is an average minimum limit of <strong>300 km per day</strong> for all outstation bookings. Tolls, parking taxes, and standard driver allowances are extra as applicable.
+                </p>
+              </div>
             </div>
 
             {/* Grid */}

@@ -3,12 +3,11 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Fleet', href: '/fleet' },
-  { label: 'Legacy', href: '/legacy' },
+  { label: 'Cabs & Buses', href: '/fleet' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -44,7 +43,7 @@ export default function Navbar() {
               Giriraj Yatra Sangh
             </span>
             <span className="text-[#9C9080] text-[10px] tracking-[0.2em] uppercase">
-              Premium Chauffeur Services
+              Premium Cab Services
             </span>
           </Link>
 
@@ -72,6 +71,15 @@ export default function Navbar() {
 
           {/* CTA + hamburger */}
           <div className="flex items-center gap-3">
+            <a
+              href="https://wa.me/919033999877?text=🙏%20*Namaste%20Giriraj%20Yatra%20Sangh!*%0A%0AI%20am%20looking%20for%20a%20reliable%20cab%20service%20and%20would%20like%20to%20make%20an%20enquiry.%20Could%20you%20please%20assist%20me%20with%20your%20fleet%20availability%20and%20rates%3F"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden md:flex items-center gap-2 bg-green-700 hover:bg-green-600 text-white text-sm px-4 py-2 rounded transition-all duration-300 shadow-lg shadow-green-900/20"
+            >
+              <MessageCircle size={14} />
+              <span>WhatsApp</span>
+            </a>
             <a
               href="tel:+919033999877"
               className="hidden md:flex items-center gap-2 text-[#C9A84C] text-sm border border-[#C9A84C]/40 px-4 py-2 rounded hover:bg-[#C9A84C] hover:text-[#0A0805] transition-all duration-300"

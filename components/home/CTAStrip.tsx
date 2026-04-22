@@ -12,7 +12,7 @@ export default function CTAStrip() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://wa.me/919033999877?text=Hi%2C%20I%20want%20to%20book%20a%20vehicle%20with%20Giriraj%20Yatra%20Sangh"
+            href="https://wa.me/919033999877?text=🙏%20*Namaste%20Giriraj%20Yatra%20Sangh!*%0A%0AI%20am%20looking%20for%20a%20reliable%20cab%20service%20and%20would%20like%20to%20make%20an%20enquiry.%20Could%20you%20please%20assist%20me%20with%20your%20fleet%20availability%20and%20rates%3F"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2.5 bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-md font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-green-900/40 hover:shadow-xl w-full sm:w-auto justify-center"

@@ -3,8 +3,7 @@ import { Phone, MessageCircle, MapPin, Mail, Clock } from 'lucide-react'
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Our Fleet', href: '/fleet' },
-  { label: 'Our Legacy', href: '/legacy' },
+  { label: 'Cabs & Buses', href: '/fleet' },
   { label: 'Travel Blog', href: '/blog' },
   { label: 'Contact Us', href: '/contact' },
 ]
@@ -33,11 +32,11 @@ export default function Footer() {
             </div>
             <div className="gold-divider mb-4" />
             <p className="text-[#9C9080] text-sm leading-relaxed">
-              Five decades of trusted, premium chauffeur services across Gujarat and beyond. Your journey, our honour.
+              Five decades of trusted, premium cab services across Gujarat and beyond. Your journey, our honour.
             </p>
             <div className="flex gap-3 mt-5">
               <a
-                href="https://wa.me/919033999877"
+                href="https://wa.me/919033999877?text=🙏%20*Namaste%20Giriraj%20Yatra%20Sangh!*%0A%0AI%20am%20looking%20for%20a%20reliable%20cab%20service%20and%20would%20like%20to%20make%20an%20enquiry.%20Could%20you%20please%20assist%20me%20with%20your%20fleet%20availability%20and%20rates%3F"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 bg-green-700 hover:bg-green-600 text-white text-xs px-3 py-2 rounded transition-colors"
@@ -93,7 +92,9 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li className="flex gap-3 text-sm text-[#9C9080]">
                 <MapPin size={15} className="text-[#C9A84C] mt-0.5 shrink-0" />
-                <span>Jamnagar, Gujarat — 361001, India</span>
+                <a href="https://maps.app.goo.gl/aJ7Hjcm6ZtTFn1EC9" target="_blank" rel="noreferrer" className="hover:text-[#C9A84C] transition-colors leading-relaxed">
+                  Shop No. 01, Simandhar Wings, Lal Wadi, Opp. ICICI Bank, Near Jain Temple, Jamnagar - 361001
+                </a>
               </li>
               <li className="flex gap-3 text-sm text-[#9C9080]">
                 <Phone size={15} className="text-[#C9A84C] mt-0.5 shrink-0" />
@@ -118,7 +119,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-[rgba(201,168,76,0.1)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#9C9080]">
           <p>© {year} Giriraj Yatra Sangh. All rights reserved.</p>
-          <p>Trusted chauffeur services since <span className="text-[#C9A84C]">1974</span></p>
+          <p>Trusted cab services since <span className="text-[#C9A84C]">1974</span></p>
         </div>
       </div>
     </footer>

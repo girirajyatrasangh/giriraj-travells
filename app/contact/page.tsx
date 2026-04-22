@@ -12,7 +12,7 @@ const faqs = [
     a: 'Once you submit the form, your request opens WhatsApp with a pre-filled message. We review it and confirm your booking within minutes via WhatsApp itself.',
   },
   {
-    q: 'Do you provide chauffeur service outside Gujarat?',
+    q: 'Do you provide cab services outside Gujarat?',
     a: 'Yes. We operate across Gujarat and provide outstation services to Rajasthan, Maharashtra, and Madhya Pradesh. Contact us for long-distance quotes.',
   },
   {
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'Are all your drivers verified?',
-    a: 'Absolutely. All our chauffeurs are background-checked, have valid commercial driving licences, and undergo training in hospitality and safe driving.',
+    a: 'Absolutely. All our drivers are background-checked, have valid commercial driving licences, and undergo training in hospitality and safe driving.',
   },
   {
     q: 'Do you provide vehicles for weddings?',
@@ -101,7 +101,9 @@ export default function ContactPage() {
                   <ul className="flex flex-col gap-4">
                     <li className="flex gap-3 text-sm text-[#9C9080] font-body">
                       <MapPin size={16} className="text-[#C9A84C] shrink-0 mt-0.5" />
-                      <span>Jamnagar, Gujarat — 361001, India</span>
+                      <a href="https://maps.app.goo.gl/aJ7Hjcm6ZtTFn1EC9" target="_blank" rel="noreferrer" className="hover:text-[#C9A84C] transition-colors leading-relaxed">
+                        Shop No. 01, Simandhar Wings, Lal Wadi, Opp. ICICI Bank, Near Jain Temple, Jamnagar - 361001
+                      </a>
                     </li>
                     <li className="flex gap-3 text-sm text-[#9C9080] font-body">
                       <Phone size={16} className="text-[#C9A84C] shrink-0 mt-0.5" />
@@ -126,9 +128,12 @@ export default function ContactPage() {
                 <div className="glass-card rounded-2xl overflow-hidden">
                   <div className="bg-[#252118] h-48 flex flex-col items-center justify-center gap-2">
                     <MapPin size={28} className="text-[#C9A84C]" />
-                    <p className="text-[#9C9080] text-sm font-body">Jamnagar, Gujarat</p>
+                    <p className="text-[#9C9080] text-sm font-body text-center px-4 leading-relaxed">
+                      Shop No. 01, Simandhar Wings, Lal Wadi,<br />
+                      Opp. ICICI Bank, Near Jain Temple, Jamnagar - 361001
+                    </p>
                     <a
-                      href="https://maps.google.com/?q=Jamnagar,Gujarat"
+                      href="https://maps.app.goo.gl/aJ7Hjcm6ZtTFn1EC9"
                       target="_blank"
                       rel="noreferrer"
                       className="text-[#C9A84C] text-xs underline underline-offset-2 hover:text-[#E2C97E] transition-colors font-body"

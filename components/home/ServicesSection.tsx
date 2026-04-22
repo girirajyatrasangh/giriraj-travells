@@ -13,7 +13,7 @@ const services = [
     title: 'Weddings & Special Events',
     description:
       'Make every occasion unforgettable with our fleet of luxury decorated vehicles. We handle the logistics so you enjoy the moments.',
-    features: ['Decorated vehicles', 'Convoy arrangements', 'On-call chauffeurs'],
+    features: ['Decorated vehicles', 'Convoy arrangements', 'Professional drivers'],
   },
   {
     icon: Building2,

@@ -4,7 +4,7 @@ import { Shield, Clock, Car, Star } from 'lucide-react'
 
 const stats = [
   { icon: Star, value: '51+', label: 'Years of Excellence' },
-  { icon: Car, value: '200+', label: 'Fleet Strength' },
+  { icon: Car, value: '200+', label: 'Total Vehicles' },
   { icon: Shield, value: '100%', label: 'Safe & Trusted' },
   { icon: Clock, value: '24/7', label: 'Always Available' },
 ]
@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-car.jpg"
-          alt="Premium luxury chauffeur vehicle"
+          alt="Premium luxury cab"
           fill
           className="object-cover"
           priority
@@ -38,7 +38,7 @@ export default function HeroSection() {
               <span className="gold-shimmer">Excellence</span>
             </h1>
             <p className="text-[#9C9080] text-base lg:text-lg leading-relaxed mb-8 font-body max-w-lg">
-              Gujarat&apos;s most trusted chauffeur service. Luxury vehicles, professional drivers, and a legacy built on dignity and punctuality.
+              Gujarat&apos;s most trusted cab service. Luxury vehicles, professional drivers, and a legacy built on dignity and punctuality.
             </p>
 
             {/* Stat badges */}

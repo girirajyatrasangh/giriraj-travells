@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
       'Tip 2: Stick to the left lane unless overtaking. At night, the lane discipline that Indian drivers sometimes ignore during the day becomes critical. Unexpected swerving or lane changes at 80+ km/h in low visibility is one of the most common causes of fatal highway accidents.',
       'Tip 3: Take a 20-minute rest every 2 hours. Microsleep — a 2 to 3 second involuntary sleep episode — happens without warning after prolonged driving and accounts for a significant number of fatal single-vehicle accidents. At 100 km/h, 3 seconds means 83 metres of uncontrolled travel. No deadline is worth that risk.',
       'Tip 4: Watch for cattle and stray dogs. Gujarat\'s highways cross numerous villages, and livestock on the road at night are nearly invisible until headlights are within 30 metres. Slow to 60 km/h when approaching villages or when road-crossing cattle warnings are visible.',
-      'Tip 5: Hire a professional chauffeur for long-distance night travel. At Giriraj Yatra Sangh, our drivers are trained specifically in night-driving safety and are familiar with Gujarat\'s highway network. For trips over 300 km, we assign rested, experienced drivers — never a driver who has already completed a day journey. Your safety is not negotiable.',
+      'Tip 5: Hire a professional driver for long-distance night travel. At Giriraj Yatra Sangh, our drivers are trained specifically in night-driving safety and are familiar with Gujarat\'s highway network. For trips over 300 km, we assign rested, experienced drivers — never a driver who has already completed a day journey. Your safety is not negotiable.',
     ],
   },
   {

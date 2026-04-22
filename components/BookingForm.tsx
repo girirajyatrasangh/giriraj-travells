@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Send } from 'lucide-react'
+import { fleetData } from '@/lib/fleet-data'
 
 interface FormData {
   name: string
@@ -18,13 +19,13 @@ interface FormErrors {
   [key: string]: string
 }
 
-const VEHICLE_TYPES = [
-  'Luxury Car (Mercedes / BMW)',
-  'Sedan (Honda City / Dzire)',
-  'SUV (Innova Crysta)',
-  'Tempo Traveller (12-17 Seater)',
-  'Mini Bus (20-27 Seater)',
-  'Full Bus (40-50 Seater)',
+
+
+const POPULAR_CITIES = [
+  'Ahmedabad', 'Surat', 'Vadodara', 'Rajkot', 'Bhavnagar', 'Jamnagar', 
+  'Gandhinagar', 'Junagadh', 'Bhuj', 'Dwarka', 'Somnath', 'Porbandar', 
+  'Morbi', 'Diu', 'Daman', 'Mumbai', 'Pune', 'Udaipur', 'Mount Abu', 
+  'Jaipur', 'Nathdwara', 'Nashik', 'Ujjain', 'Indore'
 ]
 
 const initialFormData: FormData = {
@@ -55,18 +56,28 @@ function validate(data: FormData): FormErrors {
 }
 
 function buildWhatsAppMessage(data: FormData): string {
-  const msg = `*New Booking Enquiry — Giriraj Yatra Sangh*
+  const msg = `🔔 *NEW BOOKING ENQUIRY*
+━━━━━━━━━━━━━━━━━━━━
+Greetings Giriraj Yatra Sangh! 
+I would like to book a trip with the following details:
 
-👤 *Name:* ${data.name}
-📞 *Phone:* ${data.phone}
-📍 *From:* ${data.origin}
-📍 *To:* ${data.destination}
-📅 *Date:* ${data.date}
-👥 *Passengers:* ${data.passengers}
-🚗 *Vehicle:* ${data.vehicleType}
-📝 *Notes:* ${data.notes || 'None'}
+👤 *Customer Details*
+• Name: ${data.name}
+• Phone: ${data.phone}
 
-_Sent from website booking form_`
+🛣️ *Trip Details*
+• Origin: ${data.origin}
+• Destination: ${data.destination}
+• Date: ${data.date}
+
+🚗 *Vehicle Requirements*
+• Vehicle: ${data.vehicleType}
+• Passengers: ${data.passengers} pax
+
+📝 *Additional Notes:* 
+${data.notes || 'None'}
+━━━━━━━━━━━━━━━━━━━━
+_Generated via girirajyatrasangh.com_`
   return encodeURIComponent(msg)
 }
 
@@ -98,7 +109,14 @@ export default function BookingForm({ compact = false }: Props) {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+    setFormData((prev) => {
+      const updated = { ...prev, [name]: value }
+      // If passengers change, reset the vehicle selection to force them to pick a valid one
+      if (name === 'passengers') {
+        updated.vehicleType = ''
+      }
+      return updated
+    })
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }))
     }
@@ -128,6 +146,11 @@ export default function BookingForm({ compact = false }: Props) {
 
   const getFieldBorder = (field: string) =>
     errors[field] ? 'border-red-500' : 'border-[rgba(201,168,76,0.2)]'
+
+  const selectedPassengers = parseInt(formData.passengers) || 0
+  const availableVehicles = fleetData.filter(
+    (v) => selectedPassengers === 0 || v.capacity >= selectedPassengers
+  )
 
   return (
     <form onSubmit={handleSubmit} noValidate className="w-full">
@@ -170,6 +193,7 @@ export default function BookingForm({ compact = false }: Props) {
           <input
             type="text"
             name="origin"
+            list="cities-list"
             placeholder="Pickup / Origin City *"
             value={formData.origin}
             onChange={handleChange}
@@ -183,6 +207,7 @@ export default function BookingForm({ compact = false }: Props) {
           <input
             type="text"
             name="destination"
+            list="cities-list"
             placeholder="Drop / Destination City *"
             value={formData.destination}
             onChange={handleChange}
@@ -190,6 +215,13 @@ export default function BookingForm({ compact = false }: Props) {
           />
           {errors.destination && <p className="text-red-400 text-xs px-1">{errors.destination}</p>}
         </div>
+
+        {/* Datalist for autocomplete suggestions */}
+        <datalist id="cities-list">
+          {POPULAR_CITIES.map(city => (
+            <option key={city} value={city} />
+          ))}
+        </datalist>
 
         {/* Date */}
         <div className="flex flex-col gap-1">
@@ -206,17 +238,16 @@ export default function BookingForm({ compact = false }: Props) {
 
         {/* Passengers */}
         <div className="flex flex-col gap-1">
-          <select
+          <input
+            type="number"
             name="passengers"
+            min="1"
+            max="60"
+            placeholder="No. of Passengers *"
             value={formData.passengers}
             onChange={handleChange}
             className={`${fieldClass} ${getFieldBorder('passengers')}`}
-          >
-            <option value="">Passengers *</option>
-            {[1,2,3,4,5,6,'7-10','11-17','18-27','28-50'].map((n) => (
-              <option key={n} value={n}>{n}</option>
-            ))}
-          </select>
+          />
           {errors.passengers && <p className="text-red-400 text-xs px-1">{errors.passengers}</p>}
         </div>
 
@@ -228,9 +259,15 @@ export default function BookingForm({ compact = false }: Props) {
             onChange={handleChange}
             className={`${fieldClass} ${getFieldBorder('vehicleType')}`}
           >
-            <option value="">Select Vehicle Type *</option>
-            {VEHICLE_TYPES.map((v) => (
-              <option key={v} value={v}>{v}</option>
+            <option value="">
+              {selectedPassengers > 0 
+                ? `Select Vehicle Type (Fit for ${selectedPassengers} pax) *` 
+                : 'Select Vehicle Type *'}
+            </option>
+            {availableVehicles.map((v) => (
+              <option key={v.id} value={v.name}>
+                {v.name} (Max {v.capacity} Passengers)
+              </option>
             ))}
           </select>
           {errors.vehicleType && <p className="text-red-400 text-xs px-1">{errors.vehicleType}</p>}

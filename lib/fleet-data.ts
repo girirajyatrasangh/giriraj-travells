@@ -38,7 +38,7 @@ export const fleetData: Vehicle[] = [
     capacity: 7,
     perKmRateAc: '17',
     perKmRateNonAc: '16',
-    image: '/images/innova.png',
+    image: '/images/innova-standard.png',
     tag: 'Highway Comfort',
   },
   {

@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
   },
+}
+
+export const viewport = {
   themeColor: '#0A0805',
 }
 

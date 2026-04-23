@@ -77,7 +77,7 @@ export const fleetData: Vehicle[] = [
     category: 'bus',
     capacity: 20,
     perKmRateAc: '40',
-    image: '/images/bus.png',
+    image: '/images/minibus-20.png',
     tag: 'Tour Groups',
   },
   {

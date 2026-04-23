@@ -87,7 +87,7 @@ export const fleetData: Vehicle[] = [
     capacity: 56,
     perKmRateAc: '65',
     perKmRateNonAc: '45',
-    image: '/images/bus.png',
+    image: '/images/bus-56.png',
     tag: 'Pilgrimage Special',
   },
 ]

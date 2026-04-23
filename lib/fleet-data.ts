@@ -8,7 +8,7 @@ export const fleetData: Vehicle[] = [
     capacity: 4,
     perKmRateAc: '12',
     perKmRateNonAc: '11',
-    image: '/images/fleet-sedan.jpg',
+    image: '/images/swift.png',
     tag: 'Most Economical',
   },
   {
@@ -18,7 +18,7 @@ export const fleetData: Vehicle[] = [
     capacity: 7,
     perKmRateAc: '15',
     perKmRateNonAc: '14',
-    image: '/images/fleet-suv.jpg',
+    image: '/images/ertiga.png',
     tag: 'Family Favorite',
   },
   {
@@ -28,7 +28,7 @@ export const fleetData: Vehicle[] = [
     capacity: 7,
     perKmRateAc: '16',
     perKmRateNonAc: '15',
-    image: '/images/fleet-suv.jpg',
+    image: '/images/tavera.png',
     tag: 'Rugged Explorer',
   },
   {
@@ -38,7 +38,7 @@ export const fleetData: Vehicle[] = [
     capacity: 7,
     perKmRateAc: '17',
     perKmRateNonAc: '16',
-    image: '/images/fleet-suv.jpg',
+    image: '/images/innova.png',
     tag: 'Highway Comfort',
   },
   {
@@ -48,7 +48,7 @@ export const fleetData: Vehicle[] = [
     capacity: 7,
     perKmRateAc: '20',
     perKmRateNonAc: '19',
-    image: '/images/fleet-suv.jpg',
+    image: '/images/innova.png',
     tag: 'VIP Luxury',
   },
   {
@@ -58,7 +58,7 @@ export const fleetData: Vehicle[] = [
     capacity: 17,
     perKmRateAc: '30',
     perKmRateNonAc: '28',
-    image: '/images/fleet-bus.jpg',
+    image: '/images/tempo.png',
     tag: 'Best for Groups',
   },
   {
@@ -68,7 +68,7 @@ export const fleetData: Vehicle[] = [
     capacity: 24,
     perKmRateAc: '35',
     perKmRateNonAc: '32',
-    image: '/images/fleet-bus.jpg',
+    image: '/images/tempo.png',
     tag: 'Spacious Travel',
   },
   {
@@ -77,7 +77,7 @@ export const fleetData: Vehicle[] = [
     category: 'bus',
     capacity: 20,
     perKmRateAc: '40',
-    image: '/images/fleet-bus.jpg',
+    image: '/images/bus.png',
     tag: 'Tour Groups',
   },
   {
@@ -87,7 +87,7 @@ export const fleetData: Vehicle[] = [
     capacity: 56,
     perKmRateAc: '65',
     perKmRateNonAc: '45',
-    image: '/images/fleet-bus.jpg',
+    image: '/images/bus.png',
     tag: 'Pilgrimage Special',
   },
 ]

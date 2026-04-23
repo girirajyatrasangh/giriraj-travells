@@ -3,7 +3,7 @@ import { Vehicle } from '@/components/VehicleCard'
 export const fleetData: Vehicle[] = [
   {
     id: 'swift',
-    name: 'Swift',
+    name: 'Swift Dzire',
     category: 'car',
     capacity: 4,
     perKmRateAc: '12',

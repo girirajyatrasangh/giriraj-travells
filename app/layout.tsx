@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   publisher: 'Giriraj Yatra Sangh',
   metadataBase: new URL('https://giriraj-travells.vercel.app'),
   openGraph: {
-    title: 'Giriraj Yatra Sangh | Premium Cab Services Jamnagar',
+    title: 'Giriraj Yatra Sangh | Best Cab Service in Jamnagar, Gujarat',
     description:
       'Book cabs & buses in Jamnagar. 51+ years of trusted travel. Swift Dzire, Innova, Ertiga, Force Urbania, Buses. 24/7 available.',
     url: 'https://giriraj-travells.vercel.app',

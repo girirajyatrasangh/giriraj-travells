@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Travel Blog | Gujarat Cab & Road Trip Guides | Giriraj Yatra Sangh',
+  title: 'Travel Blog | Gujarat Cab & Road Trip Guides',
   description:
     'Travel guides, cab fare tips, pilgrimage routes, and road trip itineraries for Gujarat. Written by Giriraj Yatra Sangh — trusted travel experts in Jamnagar since 1974.',
   alternates: {

@@ -8,7 +8,6 @@ import CTAStrip from '@/components/home/CTAStrip'
 import { blogPosts, BlogPost } from '@/lib/blog-data'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
 
-
 type Category = 'All' | 'Local' | 'Gujarat' | 'National'
 
 const categories: Category[] = ['All', 'Local', 'Gujarat', 'National']

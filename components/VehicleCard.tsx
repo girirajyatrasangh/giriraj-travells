@@ -19,6 +19,22 @@ interface Props {
   vehicle: Vehicle
 }
 
+// SEO-optimized alt text generation based on vehicle type
+function getVehicleAltText(vehicle: Vehicle): string {
+  const name = vehicle.name.toLowerCase()
+  
+  if (name.includes('swift')) return 'Swift Dzire cab for hire in Jamnagar — 4 seater AC taxi available 24/7'
+  if (name.includes('ertiga')) return 'Ertiga cab rental Jamnagar — 7 seater family cab for outstation trips in Gujarat'
+  if (name.includes('tavera')) return 'Tavera on rent Jamnagar — 7 seater rugged cab for Gujarat road trips'
+  if (name.includes('innova crysta')) return 'Innova Crysta rental Jamnagar — 7 seater luxury cab for weddings and pilgrimages'
+  if (name.includes('innova')) return 'Innova cab hire Jamnagar — 7 seater comfortable family cab across Gujarat'
+  if (name.includes('urbania')) return 'Force Urbania van hire Jamnagar — 17 and 24 seater group travel Gujarat'
+  if (name.includes('bus') || name.includes('coach')) return 'Bus hire Jamnagar — 56 seater bus for pilgrimages and group tours Gujarat'
+  if (name.includes('minibus') || name.includes('mini bus')) return 'Mini bus hire Jamnagar — 20 seater bus for group tours and pilgrimages Gujarat'
+  
+  return `${vehicle.name} for hire in Jamnagar — ${vehicle.capacity} seater vehicle available for tours across Gujarat`
+}
+
 export default function VehicleCard({ vehicle }: Props) {
   const hasNonAc = !!vehicle.perKmRateNonAc
   const [isAc, setIsAc] = useState(true)
@@ -46,7 +62,7 @@ _Generated via girirajyatrasangh.com_`
       <div className="relative h-48 overflow-hidden bg-[#252118] shrink-0">
         <Image
           src={vehicle.image}
-          alt={vehicle.name}
+          alt={getVehicleAltText(vehicle)}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-car.jpg"
-          alt="Premium luxury cab"
+          alt="Giriraj Yatra Sangh premium cab service Jamnagar Gujarat since 1974"
           fill
           className="object-cover"
           priority

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://giriraj-travells.vercel.app/sitemap.xml',
+    sitemap: 'https://giriraj-travells.vercel.app/sitemap/sitemap.xml',
   }
 }

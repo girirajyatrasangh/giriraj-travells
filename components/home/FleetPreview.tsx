@@ -29,7 +29,7 @@ export default function FleetPreview() {
         <div className="text-center mb-10">
           <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Our Vehicles</p>
           <h2 className="text-[#F5F0E8] font-serif text-3xl sm:text-4xl font-bold text-balance">
-            200+ Premium Vehicles
+            Explore Our Fleet of Cabs & Buses
           </h2>
           <div className="gold-divider w-24 mx-auto mt-4" />
         </div>

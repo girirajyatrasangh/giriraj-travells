@@ -34,7 +34,7 @@ export default function FleetPage() {
             </h1>
             <div className="gold-divider w-24 mx-auto mt-4 mb-6" />
             <p className="text-[#9C9080] max-w-xl mx-auto text-sm leading-relaxed font-body">
-              200+ well-maintained vehicles across every category. All our drivers are trained, verified, and deeply familiar with Gujarat&apos;s roads.
+              9+ vehicle types, all well-maintained and available across every category. All our drivers are trained, verified, and deeply familiar with Gujarat&apos;s roads.
             </p>
           </div>
         </section>

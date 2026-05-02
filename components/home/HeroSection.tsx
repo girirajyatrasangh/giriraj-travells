@@ -4,7 +4,7 @@ import { Shield, Clock, Car, Star } from 'lucide-react'
 
 const stats = [
   { icon: Star, value: '51+', label: 'Years of Excellence' },
-  { icon: Car, value: '200+', label: 'Total Vehicles' },
+  { icon: Car, value: '9+', label: 'Vehicle Types' },
   { icon: Shield, value: '100%', label: 'Safe & Trusted' },
   { icon: Clock, value: '24/7', label: 'Always Available' },
 ]

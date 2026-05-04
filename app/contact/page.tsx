@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BookingForm from '@/components/BookingForm'
 import { MapPin, Phone, Mail, Clock, ChevronDown } from 'lucide-react'
+import SectionRibbon from '@/components/SectionRibbon'
 
 const faqs = [
   {
@@ -66,7 +67,8 @@ export default function ContactPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="pt-28 pb-14 bg-[#080603] border-b border-[rgba(201,168,76,0.15)]">
+        <section className="relative bg-[#080603] overflow-hidden">
+          <div className="pt-28 pb-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Get in Touch</p>
             <h1 className="text-[#F5F0E8] font-serif text-4xl sm:text-5xl font-bold mb-4 text-balance">
@@ -77,10 +79,14 @@ export default function ContactPage() {
               Fill in the form below to send your enquiry directly via WhatsApp. We respond within minutes.
             </p>
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
 
         {/* Form + Info */}
-        <section className="py-16 bg-[#0A0805]">
+        <section className="relative bg-[#0A0805] overflow-hidden">
+          <SectionRibbon variant="soft" />
+          <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-3 gap-10">
               {/* Booking form */}
@@ -156,10 +162,14 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
 
         {/* FAQ */}
-        <section className="py-16 bg-[#080603]">
+        <section className="relative bg-[#080603] overflow-hidden">
+          <SectionRibbon variant="soft" />
+          <div className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Common Questions</p>
@@ -174,6 +184,8 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
       </main>
       <Footer />

@@ -1,12 +1,15 @@
 import Link from 'next/link'
 import { ArrowRight, Calendar } from 'lucide-react'
 import { blogPosts } from '@/lib/blog-data'
+import SectionRibbon from '@/components/SectionRibbon'
 
 export default function BlogPreview() {
   const preview = blogPosts.slice(0, 3)
 
   return (
-    <section className="py-20 bg-[#0A0805]">
+    <section className="relative bg-[#0A0805] overflow-hidden">
+      <SectionRibbon variant="soft" />
+      <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Travel Insights</p>
@@ -56,6 +59,8 @@ export default function BlogPreview() {
           </Link>
         </div>
       </div>
+      </div>
+      <SectionRibbon flip variant="soft" />
     </section>
   )
 }

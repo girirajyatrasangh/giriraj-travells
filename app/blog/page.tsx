@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import CTAStrip from '@/components/home/CTAStrip'
 import { blogPosts, BlogPost } from '@/lib/blog-data'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
+import SectionRibbon from '@/components/SectionRibbon'
 
 type Category = 'All' | 'Local' | 'Gujarat' | 'National'
 
@@ -23,7 +24,8 @@ export default function BlogPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="pt-28 pb-14 bg-[#080603] border-b border-[rgba(201,168,76,0.15)]">
+        <section className="relative bg-[#080603] overflow-hidden">
+          <div className="pt-28 pb-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Travel Insights</p>
             <h1 className="text-[#F5F0E8] font-serif text-4xl sm:text-5xl font-bold mb-4 text-balance">
@@ -34,10 +36,14 @@ export default function BlogPage() {
               Road trip guides, destination features, and travel tips from 51 years of experience on Gujarat&apos;s roads.
             </p>
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
 
         {/* Filter + Grid */}
-        <section className="py-16 bg-[#0A0805]">
+        <section className="relative bg-[#0A0805] overflow-hidden">
+          <SectionRibbon variant="soft" />
+          <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category filter */}
             <div className="flex flex-wrap gap-3 mb-10 justify-center">
@@ -104,6 +110,8 @@ export default function BlogPage() {
               </div>
             )}
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
 
         <CTAStrip />

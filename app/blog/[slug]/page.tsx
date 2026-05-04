@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import CTAStrip from '@/components/home/CTAStrip'
 import { blogPosts } from '@/lib/blog-data'
 import { Calendar, Clock, ArrowLeft, ArrowRight, Tag } from 'lucide-react'
+import SectionRibbon from '@/components/SectionRibbon'
 
 // ── Static generation: pre-build all 6 article pages ─────────────────────────
 export function generateStaticParams() {
@@ -69,7 +70,8 @@ export default async function BlogArticlePage({
       <Navbar />
       <main>
         {/* ── Article hero ─────────────────────────────────────────────── */}
-        <section className="pt-28 pb-14 bg-[#080603] border-b border-[rgba(201,168,76,0.15)]">
+        <section className="relative bg-[#080603] overflow-hidden">
+          <div className="pt-28 pb-14">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Back link */}
             <Link
@@ -103,11 +105,16 @@ export default async function BlogArticlePage({
               <span className="mx-1">·</span>
               <span>Giriraj Yatra Sangh Travel Blog</span>
             </div>
+            </div>
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
 
         {/* ── Article body ─────────────────────────────────────────────── */}
-        <section className="py-16 bg-[#0A0805]">
+        <section className="relative bg-[#0A0805] overflow-hidden">
+          <SectionRibbon variant="soft" />
+          <div className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb schema for specific articles */}
             {slug === 'pilgrimage-destinations-jamnagar-2025' && (
@@ -222,6 +229,8 @@ export default async function BlogArticlePage({
               </div>
             )}
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
 
         <CTAStrip />

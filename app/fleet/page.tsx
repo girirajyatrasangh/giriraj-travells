@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import VehicleCard from '@/components/VehicleCard'
 import CTAStrip from '@/components/home/CTAStrip'
 import { fleetData } from '@/lib/fleet-data'
+import SectionRibbon from '@/components/SectionRibbon'
 
 type Category = 'all' | 'car' | 'van' | 'bus'
 
@@ -26,7 +27,8 @@ export default function FleetPage() {
       <Navbar />
       <main>
         {/* Hero banner */}
-        <section className="pt-28 pb-14 bg-[#080603] border-b border-[rgba(201,168,76,0.15)]">
+        <section className="relative bg-[#080603] overflow-hidden">
+          <div className="pt-28 pb-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Premium Vehicles</p>
             <h1 className="text-[#F5F0E8] font-serif text-4xl sm:text-5xl font-bold mb-4 text-balance">
@@ -37,10 +39,14 @@ export default function FleetPage() {
               9+ vehicle types, all well-maintained and available across every category. All our drivers are trained, verified, and deeply familiar with Gujarat&apos;s roads.
             </p>
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
 
         {/* Filter + Grid */}
-        <section className="py-16 bg-[#0A0805]">
+        <section className="relative bg-[#0A0805] overflow-hidden">
+          <SectionRibbon variant="soft" />
+          <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Tabs */}
             <div className="flex flex-wrap gap-3 mb-10 justify-center">
@@ -88,6 +94,8 @@ export default function FleetPage() {
               ))}
             </div>
           </div>
+          </div>
+          <SectionRibbon flip variant="soft" />
         </section>
 
         <CTAStrip />

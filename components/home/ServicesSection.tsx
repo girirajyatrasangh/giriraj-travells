@@ -1,4 +1,5 @@
 import { Plane, Heart, Building2 } from 'lucide-react'
+import SectionRibbon from '@/components/SectionRibbon'
 
 const services = [
   {
@@ -26,7 +27,10 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-[#0A0805]">
+    <section className="relative bg-[#0A0805] overflow-hidden">
+      {/* Top ribbon — blends from Hero */}
+      <SectionRibbon />
+      <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -60,6 +64,9 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
+      </div>
+      {/* Bottom ribbon — blends into Fleet */}
+      <SectionRibbon flip variant="soft" />
     </section>
   )
 }

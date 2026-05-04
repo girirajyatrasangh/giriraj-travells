@@ -5,6 +5,7 @@ import Link from 'next/link'
 import VehicleCard from '@/components/VehicleCard'
 import { fleetData } from '@/lib/fleet-data'
 import { ArrowRight } from 'lucide-react'
+import SectionRibbon from '@/components/SectionRibbon'
 
 type Category = 'all' | 'car' | 'van' | 'bus'
 
@@ -23,7 +24,9 @@ export default function FleetPreview() {
     .slice(0, 3)
 
   return (
-    <section className="py-20 bg-[#080603]">
+    <section className="relative bg-[#080603] overflow-hidden">
+      <SectionRibbon variant="soft" />
+      <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10">
@@ -81,6 +84,8 @@ export default function FleetPreview() {
           </Link>
         </div>
       </div>
+      </div>
+      <SectionRibbon flip variant="soft" />
     </section>
   )
 }

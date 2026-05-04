@@ -1,8 +1,11 @@
 import { MessageCircle, Phone } from 'lucide-react'
+import SectionRibbon from '@/components/SectionRibbon'
 
 export default function CTAStrip() {
   return (
-    <section className="py-16 bg-[#080603] border-y border-[rgba(201,168,76,0.15)]">
+    <section className="relative bg-[#080603] overflow-hidden">
+      <SectionRibbon variant="soft" />
+      <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-[#F5F0E8] font-serif text-2xl sm:text-3xl font-bold mb-3 text-balance">
           Ready to Travel in Comfort?
@@ -29,6 +32,8 @@ export default function CTAStrip() {
           </a>
         </div>
       </div>
+      </div>
+      <SectionRibbon flip variant="soft" />
     </section>
   )
 }

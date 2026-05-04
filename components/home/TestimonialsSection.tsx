@@ -1,4 +1,5 @@
 import { Quote } from 'lucide-react'
+import SectionRibbon from '@/components/SectionRibbon'
 
 const testimonials = [
   {
@@ -23,7 +24,9 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-[#080603]">
+    <section className="relative bg-[#080603] overflow-hidden">
+      <SectionRibbon variant="soft" />
+      <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <p className="text-[#C9A84C] text-xs tracking-[0.3em] uppercase mb-3 font-body">Testimonials</p>
@@ -53,6 +56,8 @@ export default function TestimonialsSection() {
           ))}
         </div>
       </div>
+      </div>
+      <SectionRibbon flip variant="soft" />
     </section>
   )
 }

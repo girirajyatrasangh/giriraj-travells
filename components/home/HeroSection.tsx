@@ -219,26 +219,24 @@ export default function HeroSection() {
           <a
             href="https://wa.me/919033999877?text=🙏%20*Namaste%20Giriraj%20Yatra%20Sangh!*%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20cab%20service."
             target="_blank" rel="noreferrer" id="hero-request-quote"
-            className="group relative inline-flex items-center gap-2 overflow-hidden px-8 py-3.5 text-sm font-bold tracking-[0.15em] uppercase text-[#0A0805]"
-            style={{ background:'linear-gradient(135deg,#C9A84C,#E8D080)', borderRadius:'3px' }}
+            className="btn-primary-wave group relative inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold tracking-[0.15em] uppercase text-[#0A0805] rounded-[3px]"
           >
             <span className="relative z-10 flex items-center gap-2">
               Request a Quote
               <ChevronRight size={15} className="group-hover:translate-x-1 transition-transform duration-300" />
             </span>
-            <span className="absolute inset-0 bg-white/15 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" aria-hidden />
+            <span className="absolute inset-0 bg-white/15 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-[3px]" aria-hidden />
           </a>
 
           {/* Secondary — outlined */}
           <Link href="/fleet" id="hero-explore-fleet"
-            className="group relative inline-flex items-center gap-2 overflow-hidden px-8 py-3.5 text-sm font-semibold tracking-[0.13em] uppercase"
-            style={{ border:'1.5px solid rgba(201,168,76,0.55)', color:'#F5F0E8', background:'rgba(255,255,255,0.03)', borderRadius:'3px' }}
+            className="btn-secondary-wave group relative inline-flex items-center gap-2 px-8 py-3.5 text-sm font-semibold tracking-[0.13em] uppercase rounded-[3px] text-[#F5F0E8]"
           >
             <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-[#0A0805]">
               Explore Fleet
               <ChevronRight size={15} className="group-hover:translate-x-1 transition-transform duration-300" />
             </span>
-            <span className="absolute inset-0 bg-[#C9A84C] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" aria-hidden />
+            <span className="absolute inset-0 bg-[#C9A84C] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-[3px]" aria-hidden />
           </Link>
         </div>
       </div>

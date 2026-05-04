@@ -105,7 +105,6 @@ export default async function BlogArticlePage({
               <span className="mx-1">·</span>
               <span>Giriraj Yatra Sangh Travel Blog</span>
             </div>
-            </div>
           </div>
           </div>
           <SectionRibbon flip variant="soft" />

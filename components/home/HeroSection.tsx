@@ -215,11 +215,11 @@ export default function HeroSection() {
         <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up"
           style={{ animationDelay:'0.45s', animationFillMode:'forwards' }}>
 
-          {/* Primary — gold filled */}
+          {/* Primary */}
           <a
             href="https://wa.me/919033999877?text=🙏%20*Namaste%20Giriraj%20Yatra%20Sangh!*%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20cab%20service."
             target="_blank" rel="noreferrer" id="hero-request-quote"
-            className="btn-primary-wave group relative inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold tracking-[0.15em] uppercase text-[#0A0805] rounded-[3px]"
+            className="btn-primary-wave group relative inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold tracking-[0.15em] uppercase text-[#C9A84C] rounded-[3px]"
           >
             <span className="relative z-10 flex items-center gap-2">
               Request a Quote
@@ -230,7 +230,7 @@ export default function HeroSection() {
 
           {/* Secondary — outlined */}
           <Link href="/fleet" id="hero-explore-fleet"
-            className="btn-secondary-wave group relative inline-flex items-center gap-2 px-8 py-3.5 text-sm font-semibold tracking-[0.13em] uppercase rounded-[3px] text-[#F5F0E8]"
+            className="btn-secondary-wave group relative inline-flex items-center gap-2 px-8 py-3.5 text-sm font-semibold tracking-[0.13em] uppercase rounded-[3px] text-[#C9A84C]"
           >
             <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-[#0A0805]">
               Explore Fleet

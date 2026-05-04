@@ -186,9 +186,9 @@
 }
 
 .btn-primary-wave {
-  background: linear-gradient(135deg, #C9A84C, #E8D080, #C9A84C);
-  background-size: 200% 200%;
-  animation: border-wave 4s ease infinite;
+  position: relative;
+  background: rgba(10, 8, 5, 0.8);
+  border: 1.5px solid #C9A84C;
 }
 
 .btn-primary-wave::after {

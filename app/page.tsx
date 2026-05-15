@@ -10,11 +10,11 @@ import BlogPreview from '@/components/home/BlogPreview'
 import CTAStrip from '@/components/home/CTAStrip'
 
 export const metadata: Metadata = {
-  title: 'Giriraj Yatra Sangh | Best Cab Service in Jamnagar, Gujarat',
+  title: 'Giriraj Yatra Sangh | Best Cab Service in Jamnagar Since 1974',
   description:
     'Book cabs & buses in Jamnagar. 51 years of trust. Swift Dzire, Innova, Ertiga, Force Urbania, 56-seater buses. Airport transfers, weddings, Dwarka pilgrimages. Call +91 90339 99877.',
   alternates: {
-    canonical: 'https://giriraj-travells.vercel.app',
+    canonical: 'https://girirajyatra.in',
   },
 }
 

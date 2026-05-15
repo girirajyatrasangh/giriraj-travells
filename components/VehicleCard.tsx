@@ -53,7 +53,7 @@ I am interested in booking the following vehicle:
 
 Please let me know the availability and total cost for my trip. Thank you!
 ━━━━━━━━━━━━━━━━━━━━
-_Generated via girirajyatrasangh.com_`
+_Generated via girirajyatra.in_`
   )
 
   return (

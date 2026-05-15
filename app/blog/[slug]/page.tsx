@@ -34,12 +34,12 @@ export async function generateMetadata({
       post.category,
     ],
     alternates: {
-      canonical: `https://giriraj-travells.vercel.app/blog/${slug}`,
+      canonical: `https://girirajyatra.in/blog/${slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://giriraj-travells.vercel.app/blog/${slug}`,
+      url: `https://girirajyatra.in/blog/${slug}`,
       type: 'article',
       publishedTime: post.date,
       authors: ['Giriraj Yatra Sangh'],
@@ -124,9 +124,9 @@ export default async function BlogArticlePage({
                     '@context': 'https://schema.org',
                     '@type': 'BreadcrumbList',
                     itemListElement: [
-                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giriraj-travells.vercel.app' },
-                      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://giriraj-travells.vercel.app/blog' },
-                      { '@type': 'ListItem', position: 3, name: 'Top 7 Pilgrimage Destinations Near Jamnagar 2025', item: 'https://giriraj-travells.vercel.app/blog/pilgrimage-destinations-jamnagar-2025' },
+                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girirajyatra.in' },
+                      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://girirajyatra.in/blog' },
+                      { '@type': 'ListItem', position: 3, name: 'Top 7 Pilgrimage Destinations Near Jamnagar 2025', item: 'https://girirajyatra.in/blog/pilgrimage-destinations-jamnagar-2025' },
                     ],
                   }),
                 }}
@@ -140,9 +140,9 @@ export default async function BlogArticlePage({
                     '@context': 'https://schema.org',
                     '@type': 'BreadcrumbList',
                     itemListElement: [
-                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giriraj-travells.vercel.app' },
-                      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://giriraj-travells.vercel.app/blog' },
-                      { '@type': 'ListItem', position: 3, name: 'Why Innova Crysta Is the Best Family Road-Trip Car', item: 'https://giriraj-travells.vercel.app/blog/innova-crysta-best-family-car' },
+                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girirajyatra.in' },
+                      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://girirajyatra.in/blog' },
+                      { '@type': 'ListItem', position: 3, name: 'Why Innova Crysta Is the Best Family Road-Trip Car', item: 'https://girirajyatra.in/blog/innova-crysta-best-family-car' },
                     ],
                   }),
                 }}
@@ -156,9 +156,9 @@ export default async function BlogArticlePage({
                     '@context': 'https://schema.org',
                     '@type': 'BreadcrumbList',
                     itemListElement: [
-                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://giriraj-travells.vercel.app' },
-                      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://giriraj-travells.vercel.app/blog' },
-                      { '@type': 'ListItem', position: 3, name: 'Jamnagar to Rann of Kutch Road-Trip Guide', item: 'https://giriraj-travells.vercel.app/blog/jamnagar-to-rann-of-kutch-guide' },
+                      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girirajyatra.in' },
+                      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://girirajyatra.in/blog' },
+                      { '@type': 'ListItem', position: 3, name: 'Jamnagar to Rann of Kutch Road-Trip Guide', item: 'https://girirajyatra.in/blog/jamnagar-to-rann-of-kutch-guide' },
                     ],
                   }),
                 }}

@@ -77,7 +77,7 @@ I would like to book a trip with the following details:
 📝 *Additional Notes:* 
 ${data.notes || 'None'}
 ━━━━━━━━━━━━━━━━━━━━
-_Generated via girirajyatrasangh.com_`
+_Generated via girirajyatra.in_`
   return encodeURIComponent(msg)
 }
 

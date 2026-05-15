@@ -41,16 +41,16 @@ export const metadata: Metadata = {
   authors: [{ name: 'Giriraj Yatra Sangh' }],
   creator: 'Giriraj Yatra Sangh',
   publisher: 'Giriraj Yatra Sangh',
-  metadataBase: new URL('https://giriraj-travells.vercel.app'),
+  metadataBase: new URL('https://girirajyatra.in'),
   openGraph: {
     title: 'Giriraj Yatra Sangh | Best Cab Service in Jamnagar, Gujarat',
     description:
       'Book cabs & buses in Jamnagar. 51+ years of trusted travel. Swift Dzire, Innova, Ertiga, Force Urbania, Buses. 24/7 available.',
-    url: 'https://giriraj-travells.vercel.app',
+    url: 'https://girirajyatra.in',
     siteName: 'Giriraj Yatra Sangh',
     images: [
       {
-        url: '/images/hero-car.jpg',
+        url: 'https://girirajyatra.in/images/hero-car.jpg',
         width: 1200,
         height: 630,
         alt: 'Giriraj Yatra Sangh Premium Cab Service Jamnagar Gujarat',
@@ -64,10 +64,10 @@ export const metadata: Metadata = {
     title: 'Giriraj Yatra Sangh | Cab Service Jamnagar',
     description:
       'Trusted cab service in Jamnagar since 1974. Airport, weddings, pilgrimages. Call +91 90339 99877.',
-    images: ['/images/hero-car.jpg'],
+    images: ['https://girirajyatra.in/images/hero-car.jpg'],
   },
   alternates: {
-    canonical: 'https://giriraj-travells.vercel.app',
+    canonical: 'https://girirajyatra.in',
   },
   icons: {
     icon: [
@@ -108,9 +108,9 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Giriraj Yatra Sangh',
-    image: 'https://giriraj-travells.vercel.app/images/hero-car.jpg',
-    '@id': 'https://giriraj-travells.vercel.app',
-    url: 'https://giriraj-travells.vercel.app',
+    image: 'https://girirajyatra.in/images/hero-car.jpg',
+    '@id': 'https://girirajyatra.in',
+    url: 'https://girirajyatra.in',
     telephone: '+919033999877',
     email: 'girirajyatrasangh@gmail.com',
     address: {

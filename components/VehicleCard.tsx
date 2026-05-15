@@ -76,7 +76,7 @@ _Generated via girirajyatra.in_`
 
       {/* Info */}
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="text-[#F5F0E8] font-serif text-lg font-semibold mb-3">{vehicle.name}</h3>
+        <h2 className="text-[#F5F0E8] font-serif text-lg font-semibold mb-3">{vehicle.name}</h2>
 
         <div className="flex flex-wrap items-center gap-4 mb-5">
           <span className="flex items-center gap-1.5 text-[#9C9080] text-sm">
@@ -122,7 +122,7 @@ _Generated via girirajyatra.in_`
           <div className="flex items-end justify-between mb-5">
             <div>
               <span className="text-[#9C9080] text-sm block">Rate Per KM</span>
-              <span className="text-[#9C9080]/50 text-[10px] uppercase tracking-wider block mt-0.5 font-medium">Min. 300 km / day</span>
+              <span className="text-[#9C9080] text-[10px] uppercase tracking-wider block mt-0.5 font-medium">Min. 300 km / day</span>
             </div>
             <div className="text-right">
               <span className="text-[#C9A84C] font-semibold text-xl flex items-center gap-0.5">

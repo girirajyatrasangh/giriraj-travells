@@ -133,7 +133,7 @@ function FleetCard({ image, title, description, href }: { image: string; title: 
         <Image src={image} alt={title} fill priority className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="96px" />
       </div>
       <div>
-        <h3 className="text-[#F5F0E8] font-serif text-sm font-bold mb-1 group-hover:text-[#C9A84C] transition-colors">{title}</h3>
+        <h2 className="text-[#F5F0E8] font-serif text-sm font-bold mb-1 group-hover:text-[#C9A84C] transition-colors">{title}</h2>
         <p className="text-[#9C9080] text-xs leading-relaxed font-body line-clamp-2">{description}</p>
       </div>
     </Link>

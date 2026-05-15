@@ -209,6 +209,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable} bg-background`}>
       <head>
+        {/* Preload above-fold hero images to improve LCP */}
+        <link rel="preload" as="image" href="/images/innova.png" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/bus-56.png" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

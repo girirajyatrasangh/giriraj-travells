@@ -1,13 +1,17 @@
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+
+// ── Above-fold: static imports (must load immediately) ──
 import HeroSection from '@/components/home/HeroSection'
 import ServicesSection from '@/components/home/ServicesSection'
-import FleetPreview from '@/components/home/FleetPreview'
 
-import TestimonialsSection from '@/components/home/TestimonialsSection'
-import BlogPreview from '@/components/home/BlogPreview'
-import CTAStrip from '@/components/home/CTAStrip'
+// ── Below-fold: dynamic imports (reduces initial JS bundle ~119 KiB) ──
+const FleetPreview = dynamic(() => import('@/components/home/FleetPreview'))
+const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'))
+const BlogPreview = dynamic(() => import('@/components/home/BlogPreview'))
+const CTAStrip = dynamic(() => import('@/components/home/CTAStrip'))
 
 export const metadata: Metadata = {
   title: 'Giriraj Yatra Sangh | Best Cab Service in Jamnagar Since 1974',

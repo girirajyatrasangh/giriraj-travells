@@ -3,7 +3,7 @@ import { Playfair_Display, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
-
+import LenisProvider from '@/components/LenisProvider'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -68,16 +68,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://girirajyatra.in',
-  },
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    shortcut: '/favicon.ico',
   },
   robots: {
     index: true,
@@ -222,7 +212,9 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        {children}
+        <LenisProvider>
+          {children}
+        </LenisProvider>
         <Analytics />
         <GoogleAnalytics gaId="G-L5W8TFQJ1F" />
       </body>

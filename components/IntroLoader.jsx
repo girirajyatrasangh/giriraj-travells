@@ -124,22 +124,7 @@ export default function IntroLoader() {
           />
         ))}
 
-        {/* ── Tag: Est. 1974 ── */}
-        <div style={{
-          fontFamily: 'var(--font-montserrat), Helvetica Neue, sans-serif',
-          fontSize: 9,
-          fontWeight: 500,
-          letterSpacing: '5px',
-          color: 'rgba(201,168,76,0.45)',
-          textTransform: 'uppercase',
-          marginBottom: 36,
-          opacity: phase >= 2 ? 1 : 0,
-          transform: phase >= 2 ? 'translateY(0)' : 'translateY(6px)',
-          transition: `opacity 0.7s ease, transform 0.7s ease`,
-          whiteSpace: 'nowrap',
-        }}>
-          Est. 1974 &nbsp;·&nbsp; Jamnagar, Gujarat
-        </div>
+
 
         {/* ── Chakra Wheel ── */}
         <div style={{
@@ -272,48 +257,7 @@ export default function IntroLoader() {
           </div>
         </div>
 
-        {/* ── Bottom: progress bar + tagline ── */}
-        <div style={{
-          position: 'absolute',
-          bottom: 72,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 14,
-          opacity: phase >= 8 ? 1 : 0,
-          transition: 'opacity 0.7s ease',
-        }}>
-          {/* Progress bar */}
-          <div style={{
-            width: 140,
-            height: 1,
-            background: 'rgba(201,168,76,0.1)',
-            position: 'relative',
-            overflow: 'hidden',
-          }}>
-            <div style={{
-              position: 'absolute',
-              left: 0, top: 0,
-              height: 1,
-              width: phase >= 9 ? '100%' : '0%',
-              background: '#C9A84C',
-              transition: `width 2.2s ${fadeEase}`,
-            }} />
-          </div>
 
-          {/* Tagline */}
-          <div style={{
-            fontFamily: 'var(--font-montserrat), Helvetica Neue, sans-serif',
-            fontSize: 9,
-            fontWeight: 300,
-            letterSpacing: '4px',
-            color: 'rgba(255,255,255,0.18)',
-            textTransform: 'uppercase',
-            fontStyle: 'italic',
-          }}>
-            Your journey, our honour
-          </div>
-        </div>
 
       </div>
       {/* ── END LOADER OVERLAY ── */}

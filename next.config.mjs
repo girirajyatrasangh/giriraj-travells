@@ -10,7 +10,37 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     // Cache optimised images for at least 60 seconds
     minimumCacheTTL: 60,
+    // Allow images from these remote hosts
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'girirajyatra.in',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.supabase.co',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
+  // Redirect www subdomain to root domain for SEO consolidation
+  redirects: async () => [
+    {
+      source: '/:path*',
+      destination: '/:path*',
+      permanent: true,
+      basePath: false,
+      has: [
+        {
+          type: 'host',
+          value: 'www.girirajyatra.in',
+        },
+      ],
+    },
+  ],
 }
 
 export default nextConfig

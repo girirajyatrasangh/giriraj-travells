@@ -1,19 +1,23 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Playfair_Display, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import LenisProvider from '@/components/LenisProvider'
+import IntroLoader from '@/components/IntroLoader'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
+  weight: ['400', '500'],
+  style: ['normal', 'italic'],
   variable: '--font-playfair',
   display: 'swap',
 })
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500'],
+  variable: '--font-montserrat',
   display: 'swap',
 })
 
@@ -197,7 +201,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} bg-background`}>
+    <html lang="en" className={`${playfair.variable} ${montserrat.variable} bg-background`}>
       <head>
         {/* Preload above-fold hero images to improve LCP */}
         <link rel="preload" as="image" href="/images/innova.png" fetchPriority="high" />
@@ -212,6 +216,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <IntroLoader />
         <LenisProvider>
           {children}
         </LenisProvider>
